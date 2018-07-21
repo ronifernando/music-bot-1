@@ -16,6 +16,7 @@ try {
 
     env.DISCORD_ADMIN_ID     = config.admin_id;
     env.DISCORD_TOKEN        = config.token;
+    env.DISCORD_PREFIX       = config.prefix;
     env.DISCORD_CHANNEL_NAME = config.channel_name;
     env.DISCORD_GOOGLE_KEY   = config.google_key;
     env.DISCORD_DOWNLOAD_DIR = config.download_dir;
@@ -35,7 +36,7 @@ let options = {
     modules:   [
         require('./Module/MusicModule/MusicModule')
     ],
-    prefix:    "!",
+    prefix:    env.DISCORD_PREFIX,
     redis_url: env.DISCORD_REDIS_URL,
     mongo_url: env.DISCORD_MONGO_URL,
     queue:     {
