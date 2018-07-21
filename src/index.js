@@ -15,10 +15,10 @@ try {
     var config = require('../config.json');
 
     env.DISCORD_ADMIN_ID     = config.admin_id;
-    env.DISCORD_TOKEN        = config.token;
+    env.DISCORD_TOKEN        = process.env.BOT_TOKEN;
     env.DISCORD_PREFIX       = config.prefix;
     env.DISCORD_CHANNEL_NAME = config.channel_name;
-    env.DISCORD_GOOGLE_KEY   = config.google_key;
+    env.DISCORD_GOOGLE_KEY   = process.env.BOT_GT;
     env.DISCORD_DOWNLOAD_DIR = config.download_dir;
     env.DISCORD_REDIS_URL    = config.redis_url;
     env.DISCORD_MONGO_URL    = config.mongo_url;
